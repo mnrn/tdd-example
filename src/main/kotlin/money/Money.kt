@@ -24,7 +24,7 @@ open class Money(amount: Int, currency: String) {
     }
 
     companion object Factory {
-        fun dollar(amount: Int): Money = Dollar(amount, "USD")
-        fun franc(amount: Int): Money = Franc(amount, "CHF")
+        fun dollar(amount: Int): Money = Money(amount, "USD")
+        fun franc(amount: Int): Money = Money(amount, "CHF")
     }
 }
