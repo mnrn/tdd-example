@@ -1,11 +1,15 @@
 package money
 
-open class Money(amount: Int, currency: String) {
+open class Money(amount: Int, currency: String): Expression {
     private val amount: Int = amount
     private val currency: String = currency
 
-    open fun times(multiplier: Int): Money {
+    fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
+    }
+
+    fun plus(addend: Money): Expression{
+        return Money(amount + addend.amount, currency)
     }
 
     fun currency(): String {
