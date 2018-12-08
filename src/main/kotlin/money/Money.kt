@@ -1,20 +1,23 @@
 package money
 
 open class Money(amount: Int, currency: String): Expression {
-    private val amount: Int = amount
-    private val currency: String = currency
+    private val amount = amount
+    private val currency = currency
 
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
 
     fun plus(addend: Money): Expression{
-        return Money(amount + addend.amount, currency)
+        return Sum(this, addend)
     }
 
-    fun currency(): String {
-        return currency
+    override fun reduce(to: String): Money {
+        return this
     }
+
+    fun currency(): String = currency
+    fun amount(): Int = amount
 
     override fun equals(other: Any?): Boolean {
         return when (other is Money) {
