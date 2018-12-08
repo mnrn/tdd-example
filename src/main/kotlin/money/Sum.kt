@@ -1,10 +1,8 @@
 package money
 
-class Sum(augend: Money, addend: Money): Expression {
-    internal val augend = augend
-    internal val addend = addend
+class Sum(internal val augend: Money, internal val addend: Money): Expression {
 
-    override fun reduce(to: String): Money {
+    override fun reduce(bank: Bank, to: String): Money {
         val amount = augend.amount() + addend.amount()
         return Money(amount, to)
     }

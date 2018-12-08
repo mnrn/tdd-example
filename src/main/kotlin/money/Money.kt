@@ -1,19 +1,18 @@
 package money
 
-open class Money(amount: Int, currency: String): Expression {
-    private val amount = amount
-    private val currency = currency
+open class Money(private val amount: Int, private val currency: String): Expression {
 
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
 
-    fun plus(addend: Money): Expression{
+    fun plus(addend: Money): Expression {
         return Sum(this, addend)
     }
 
-    override fun reduce(to: String): Money {
-        return this
+    override fun reduce(bank: Bank, to: String): Money {
+        val rate = bank.rate(currency, to)
+        return Money(amount / rate, to)
     }
 
     fun currency(): String = currency
