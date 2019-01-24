@@ -14,6 +14,7 @@ class Bank {
     }
 
     fun rate(from: String, to: String): Int {
+        check(from.equals(to) || rates.containsKey(CurrencyPair(from, to)))
         return if (from.equals(to)) 1
         else rates.getValue(CurrencyPair(from, to))
     }
