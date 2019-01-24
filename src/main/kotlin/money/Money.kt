@@ -19,7 +19,7 @@ open class Money(private val amount: Int, private val currency: String): Express
     fun amount(): Int = amount
 
     override fun equals(other: Any?): Boolean {
-        val money = other as Money
+        val money = checkNotNull(other){"other must be not null."} as Money
         return amount() == money.amount() && currency() == money.currency()
     }
 
