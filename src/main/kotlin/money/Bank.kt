@@ -15,6 +15,6 @@ class Bank {
 
     fun rate(from: String, to: String): Int {
         return if (from.equals(to)) 1
-        else rates[CurrencyPair(from, to)] ?: Int.MAX_VALUE
+        else rates.getValue(CurrencyPair(from, to))
     }
 }

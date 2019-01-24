@@ -19,10 +19,8 @@ open class Money(private val amount: Int, private val currency: String): Express
     fun amount(): Int = amount
 
     override fun equals(other: Any?): Boolean {
-        return when (other is Money) {
-            true -> amount == other.amount && currency() == other.currency()
-            false -> false
-        }
+        val money = other as Money
+        return amount() == money.amount() && currency() == money.currency()
     }
 
     override fun toString(): String {
