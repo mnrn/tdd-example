@@ -23,6 +23,10 @@ open class Money(private val amount: Int, private val currency: String): Express
         return amount() == other.amount() && currency() == other.currency()
     }
 
+    override fun toString(): String {
+        return amount.toString() + " " + currency
+    }
+    
     companion object Factory {
         fun dollar(amount: Int): Money = Money(amount, "USD")
         fun franc(amount: Int): Money = Money(amount, "CHF")
