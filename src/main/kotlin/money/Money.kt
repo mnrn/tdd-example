@@ -19,7 +19,7 @@ open class Money(private val amount: Int, private val currency: String): Express
     fun amount(): Int = amount
 
     override fun equals(other: Any?): Boolean {
-        check(other is Money) { "other must be Money." }
+        require(other is Money) { "other must be Money." }
         return amount() == other.amount() && currency() == other.currency()
     }
 
