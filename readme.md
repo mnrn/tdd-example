@@ -1,4 +1,4 @@
-# Test Driven Development Example written by Kotlin
+# Test Driven Development Example written in Kotlin
 
 [![Build Status](https://travis-ci.org/mnrn/tdd-example.svg?branch=master)](https://travis-ci.org/mnrn/tdd-example)
 
