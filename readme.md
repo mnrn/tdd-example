@@ -5,4 +5,4 @@
 [![codecov](https://codecov.io/gh/mnrn/tdd-example/branch/master/graph/badge.svg)](https://codecov.io/gh/mnrn/tdd-example)
 ![Language](https://img.shields.io/badge/Language-Kotlin-orange)
 
-[テスト駆動開発](https://shop.ohmsha.co.jp/shopdetail/000000004967/)にあるJavaのコードをKotlinに書き直してみました。
+[テスト駆動開発](https://shop.ohmsha.co.jp/shopdetail/000000004967/)という本にあるJavaのコードをKotlinに書き直してみました。
