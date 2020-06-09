@@ -11,3 +11,4 @@ width="256">
 width="256">
 
 [テスト駆動開発](https://shop.ohmsha.co.jp/shopdetail/000000004967/)という本にある第1章のJavaのコードをKotlinに書き直してみました。
+もとのコードありきのため、無理に Codecov 率を上げることはしませんでした。
