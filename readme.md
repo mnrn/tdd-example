@@ -7,5 +7,7 @@
 
 <img src="https://images-na.ssl-images-amazon.com/images/I/719E-POor7L.jpg" 
 width="256">
+<img src="https://images-na.ssl-images-amazon.com/images/I/41pO5GqNtzL._AC_SY400_.jpg"
+width="256">
 
 [テスト駆動開発](https://shop.ohmsha.co.jp/shopdetail/000000004967/)という本にある第1章のJavaのコードをKotlinに書き直してみました。
